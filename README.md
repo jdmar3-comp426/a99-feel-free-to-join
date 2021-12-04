@@ -9,7 +9,7 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 2. VSCode
 3. Node.js
 
-## Set Up
+## SetUp
 
 1. Open this repository in VSCode
 2. Once it is opened, open up a terminal window
@@ -25,6 +25,9 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 4. There is a **Leaderboard** tab where it keeps track of highest scores among users
 5. At any point of the game, you have the option to go back to the Main Menu and restart as a different user
 
+## API Documentation
+
+For a detailed API Documentation click [here](/docs/doc.txt).
 
 ## Dependencies 
 
@@ -48,4 +51,4 @@ For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
 4. yuweimiao - Yuwei Miao
 5. stackeberry - Sam Tack
 
-For more information regarding contributers go to [doc file](/docs/doc.txt)! :)
+Detailed roles of the contributors can be found in the [doc file](/docs/doc.txt)! :)
