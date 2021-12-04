@@ -1,0 +1,50 @@
+a99-feel-free-to-join: Word Guessing Game
+
+Detailed Dependencies:
+"better-sqlite3": "^7.4.5",
+"browser-sync": "^2.27.7",
+"concurrently": "^6.4.0",
+"cors": "^2.8.5",
+"express": "^4.17.1",
+"fs": "^0.0.1-security",
+"md5": "^2.3.0",
+"multer": "^1.4.3"
+
+Contributers' Roles:
+DJ Moore(djm0321): Back-end Lead
+Natalie Yuziuk(nasyyu): Front-end Lead
+Fariha Marzan(Fariha-Marzan): Documentation & Plan Manager
+Yuwei Miao(yuweimiao): Database Lead
+Sam Tack(stackeberry): Review Manager
+
+API Documentation:
+
+database.js
+This file implements a database consisting of sqlInit and initializing 11 players as an example.
+
+form.js
+This files determines if the user login is successful or prompts user to input a different username/password
+
+functions.js
+This file contains functions that handles sending data to user regarding if the guess is correct as well as keeps track of user scores through counting the amount of strikes are left.
+
+server.js
+This file deals with the code to create the API that allow users to run the server
+
+words.js
+The following file creates new words and creates json files if it already does not exist
+
+words.json, words.txt
+These two files contain all the words that are prompted to the users.
+
+gamePage.html
+This file sets up the Game Page where the user has the ability to start, get next word, go to the Leaderboard or return to the Main Menu.
+
+index.html
+It impliments the login user page and creates a new user every time user inputs information.
+
+leaderboard.html
+This file automatically relist the players based off how high their score is
+
+leaderboardlogic.js
+This file contains the backend where the player scores are being retrieved
