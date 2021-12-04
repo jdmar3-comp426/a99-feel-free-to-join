@@ -40,7 +40,7 @@ For a detailed API Documentation click [here](/docs/doc.txt).
 7. md5
 8. multer
 
-For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
+For more information go to [Detailed Dependencies](/docs/doc.txt).
 
 ## Video Demo
 
