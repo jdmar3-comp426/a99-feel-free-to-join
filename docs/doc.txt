@@ -1,0 +1,17 @@
+a99-feel-free-to-join: Word Guessing Game
+
+Dependencies:
+"better-sqlite3": "^7.4.5",
+"concurrently": "^6.4.0",
+"cors": "^2.8.5",
+"express": "^4.17.1",
+"fs": "^0.0.1-security",
+"md5": "^2.3.0",
+"multer": "^1.4.3"
+
+Contributers' Roles:
+DJ Moore(djm0321): Back-end Lead
+Natalie Yuziuk(nasyyu): Front-end Lead
+Fariha Marzan(Fariha-Marzan): Documentation & Plan Manager
+Yuwei Miao(yuweimiao): Database Lead
+Sam Tack(stackeberry): Review Manager

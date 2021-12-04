@@ -45,3 +45,4 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 3. Fariha-Marzan - Fariha Marzan
 4. yuweimiao - Yuwei Miao
 5. stackeberry - Sam Tack
+For more information regarding contributers go to [doc file](/Users/farihamarzan/a99-feel-free-to-join/docs/doc.txt)! :)
