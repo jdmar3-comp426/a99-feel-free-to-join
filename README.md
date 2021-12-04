@@ -43,6 +43,8 @@ For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
 
 ## Video Demo
 
+Click [here](www.dukesucks.com)!
+
 ## Contributors
 
 1. djm0321 - DJ Moore
