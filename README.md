@@ -32,12 +32,13 @@ For a detailed API Documentation click [here](/docs/doc.txt).
 ## Dependencies 
 
 1. better-sqlite3
-2. concurrently
-3. cors
-4. express
-5. fs
-6. md5
-7. multer
+2. browser-sync
+3. concurrently
+4. cors
+5. express
+6. fs
+7. md5
+8. multer
 
 For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
 
