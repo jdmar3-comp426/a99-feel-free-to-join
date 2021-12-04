@@ -5,9 +5,9 @@ window.addEventListener( "load" , function() {
         alert("Please log in to play the game");
     }
     else {
-        console.log(`http://localhost:5000/app/user/${localStorage.getItem("id")}`)
+        console.log(`http://${location.hostname}:5000/app/user/${localStorage.getItem("id")}`)
         const XHR = new XMLHttpRequest();
-        XHR.open("GET", `http://localhost:5000/app/user/${localStorage.getItem("id")}`)
+        XHR.open("GET", `http://${location.hostname}:5000/app/user/${localStorage.getItem("id")}`)
         XHR.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 200) {
                 var json = (JSON.parse(XHR.response));
