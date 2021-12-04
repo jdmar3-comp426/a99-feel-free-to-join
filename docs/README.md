@@ -3,13 +3,13 @@
 
 Word Guessing Game is a fun interactive vocabulary game. In this game, the user gets 50 strikes to guess the most amount of words with no time limit. 
 
-# Prerequisites
+## Prerequisites
 
 1. Web Browser
 2. VSCode
 3. Node.js
 
-# Set Up
+## Set Up
 
 1. Open this repository in VSCode
 2. Once it is opened, open up a terminal window
@@ -17,16 +17,16 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 4. Once it is done installing, run the command `npm start run`
 5. Open up a web browser and go to http://localhost:3000/
 
-# Instructions
+## Instructions
 
 1. In the Main Menu, log into the game with a username and password 
-2. As you start the game, you get 50 strikes to guess the most amount of words with no time limit
-3. After reaching 50 strikes, your points are displayed based on however many words you have successfully guessed
+2. As you start the game, you get **50 strikes** to guess the most amount of words with no time limit
+3. After reaching 50 strikes, your points are displayed based on however many words you have successfully guessed and scrabble letter's point value.
 4. There is a Leaderboard tab where it keeps track of highest scores among users
 5. At any point of the game, you have the option to go back to the Main Menu and restart as a different user
 
 
-# Dependencies 
+## Dependencies 
 
 1. "better-sqlite3": "^7.4.5"
 2. "concurrently": "^6.4.0"
@@ -36,9 +36,9 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 6. "md5": "^2.3.0",
 7. "multer": "^1.4.3"
 
-# Video Demo
+## Video Demo
 
-# Contributors
+## Contributors
 
 1. djm0321 - DJ Moore
 2. nasyyu - Natalie Yuziuk
