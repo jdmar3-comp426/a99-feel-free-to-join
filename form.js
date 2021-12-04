@@ -30,7 +30,7 @@ window.addEventListener( "load", function () {
             
     }
 
-    // document.getElementById('delete').addEventListener('onclick', deleteUser);
+    // document.getElementById('delete').addEventListener('click', deleteUser);
 
     function newUser() {
         const XHR = new XMLHttpRequest(),
@@ -40,10 +40,10 @@ window.addEventListener( "load", function () {
     }
 
     // function deleteUser() {
-        //const XHR = new XMLHttpRequest(),
-        //    FD = new URLSearchParams(new FormData( form ));
-        // XHR.open("DELETE", "http://localhost:5000/app/delete/user:id");
-        // XHR.send( FD );
+    //     const XHR = new XMLHttpRequest(),
+    //        FD = new URLSearchParams(new FormData( form ));
+    //     XHR.open("DELETE", "http://localhost:5000/app/delete/user:id");
+    //     XHR.send( FD );
     //    console.log("User Deleted");
     // }
     
