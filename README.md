@@ -32,9 +32,10 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 2. concurrently
 3. cors
 4. express
-5. fs"
+5. fs
 6. md5
 7. multer
+
 For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
 
 ## Video Demo
@@ -46,4 +47,5 @@ For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
 3. Fariha-Marzan - Fariha Marzan
 4. yuweimiao - Yuwei Miao
 5. stackeberry - Sam Tack
+
 For more information regarding contributers go to [doc file](/docs/doc.txt)! :)
