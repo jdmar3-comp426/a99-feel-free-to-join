@@ -30,6 +30,12 @@ app.get("/app/", (req, res, next) => {
 	res.status(200);
 });
 
+app.get("/app/users/login/:user&:pass", (req, res) => {
+	console.log(req.params.user)
+	const stmt = db.prepare(`SELECT id FROM userinfo WHERE user=? AND pass=?`).get(req.params.user, md5(req.params.pass));
+	res.status(200).json(stmt);
+})
+
 // Define other CRUD API endpoints using express.js and better-sqlite3
 
 app.get("/app/users/scores", (req, res) => {
@@ -39,6 +45,7 @@ app.get("/app/users/scores", (req, res) => {
 
 // CREATE a new user (HTTP method POST) at endpoint /app/new/
 app.post("/app/new/", (req, res) => {	
+	console.log(req.body)
 	const stmt = db.prepare("INSERT INTO userinfo (user, pass) VALUES (?, ?)").run(req.body.user, md5(req.body.pass));
 	res.json({"message":`1 record created: ID ${stmt.lastInsertRowid} (201)`});
 	res.status(201);
@@ -63,15 +70,17 @@ app.get("/app/users/", (req, res) => {
 
 // READ a single user (HTTP method GET) at endpoint /app/user/:id
 app.get("/app/user/:id", (req, res) => {
+	console.log(req.params.id);
 	const stmt = db.prepare(`SELECT * FROM userinfo WHERE id = ${req.params.id}`).get();
 	res.status(200).json(stmt);
 });
 
 // CHECK if user already exists, if it does, re-login
-app.get("/app/user/:user", (req, res) => {
-	const stmt = db.prepare(`SELECT * FROM userinfo WHERE user = ${req.params.user}`).get();
+app.get("/app/users/:user", (req, res) => {
+	const stmt = db.prepare(`SELECT * FROM userinfo WHERE user = ?`).get(req.params.user);
 	res.status(200).json(stmt);
-}); 
+});
+
 // UPDATE a single user (HTTP method PATCH) at endpoint /app/update/user/:id
 app.patch("/app/update/user/:id", (req, res) => {	
 	var user = req.body.user;
@@ -93,7 +102,9 @@ app.get("/app/word/", (req, res) => {
     res.status(200).json({"message": words.words[Math.floor(Math.random() * (words.words.length - 1))]});
 });
 
-
+app.patch("/app/update/highscore/:id-:score", (req, res) => {
+	const stmt = db.prepare("UPDATE userinfo SET score = COALESCE(?, score) where id = ?").run(req.params.score, req.params.id)
+})
 
 // Default response for any other request
 app.use(function(req, res){

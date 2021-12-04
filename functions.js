@@ -1,6 +1,5 @@
 export function arrayToString(userinfo) {
     let array = userinfo.userView;
-    console.log(array);
     let returnString = "";
     let finished = true;
     for (let i = 0; i < array.length; i++) {
@@ -11,6 +10,8 @@ export function arrayToString(userinfo) {
         }
     }
     if (finished) {
+        document.getElementById("words").innerHTML += userinfo.word + ", "
+        scoreWord(userinfo);
         startGame(userinfo, "");
     }
     return returnString;
@@ -40,16 +41,12 @@ export function sendData(userInfo, form) {
             document.getElementById('guesses').innerHTML += [...signupInfo][0][1].toLowerCase();
             userInfo.strikes += 1;
             document.getElementById('strikes').innerHTML = userInfo.strikes;
-            if (strikes == 100) {
-
+            if (userInfo.strikes >= 50) {
+                resetGame(userInfo);
             }
         }
         form.reset();
     }
-}
-
-export function countScore(score) {
-    return score + 1;
 }
 
 export function resetScore() {
@@ -63,7 +60,6 @@ export function loadWords(startGame, userInfo) {
     sendRequest.onreadystatechange = function() {
         if (this.readyState==4 && this.status == 200) {
             response = (JSON.parse(sendRequest.response).message);
-            console.log("no");
             startGame(userInfo, response);
         }
     }
@@ -72,7 +68,6 @@ export function loadWords(startGame, userInfo) {
 
 export function startGame(userInfo, w) {
     if (w == ""){
-        console.log("yes");
         w = loadWords(startGame, userInfo);
     } else {
         document.getElementById('guesses').innerHTML = "";
@@ -93,7 +88,6 @@ export function leaderBoard() {
     sendRequest.onreadystatechange = function() {
         if (this.readyState==4 && this.status == 200) {
             response = (JSON.parse(sendRequest.response));
-            console.log(response);
             for (let i = 0; i < response.length; i++) {
                 let score = response[i];
                 document.getElementById("showrank").innerText+=score.user + '\t\t' + score.score + '\n';
@@ -104,9 +98,9 @@ export function leaderBoard() {
     return response;
 }
 
-function scoreWord(w) {
+function scoreWord(userinfo) {
     let score = 0;
-    for (var letter in word) {
+    for (let letter of userinfo.word) {
         switch(letter){
             case 'a':
             case 'e':
@@ -150,5 +144,27 @@ function scoreWord(w) {
                 break;
         }
     }
-    return score;
+    userinfo.score += score;
+    document.getElementById("score").innerHTML = userinfo.score;
+    if (parseInt(document.getElementById("highscore").innerText) < userinfo.score) {
+        document.getElementById("highscore").innerHTML = userinfo.score;
+    }
+}
+
+function resetGame(userInfo) {
+    document.getElementById('guesses').innerHTML = "";
+    document.getElementById('known').innerHTML = "";
+    document.getElementById('strikes').innerHTML = "";
+    document.getElementById('score').innerHTML = 0;
+    document.getElementById('words').innerHTML = '';
+    if(userInfo.score > userInfo.currentHighScore) {
+        const XHP = new XMLHttpRequest();
+        XHP.open("PATCH", `http://localhost:5000/app/update/highscore/${localStorage.getItem("id")}-${userInfo.score}`)
+        XHP.send();
+        XHP.addEventListener('load', function() {
+            alert("New Highscore!!!");
+        })
+    }
+    userInfo.started = false;
+    alert("Game over. Please start a new game.")
 }
