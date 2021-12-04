@@ -38,7 +38,7 @@ window.addEventListener( "load", function () {
             
     }
 
-    this.document.getElementById("delete").addEventListener("click", deleteUser());
+    // this.document.getElementById("delete").addEventListener("click", deleteUser());
 
     function newUser() {
         const XHR = new XMLHttpRequest(),
@@ -51,13 +51,13 @@ window.addEventListener( "load", function () {
         sendData();
     }
 
-    function deleteUser() {
-        const XHR = new XMLHttpRequest(),
-           FD = new URLSearchParams(new FormData( form ));
-        XHR.open("DELETE", "http://localhost:5000/app/delete/user:id");
-        XHR.send( FD );
-       console.log("User Deleted");
-    }
+    // function deleteUser() {
+    //     const XHR = new XMLHttpRequest(),
+    //        FD = new URLSearchParams(new FormData( form ));
+    //     XHR.open("DELETE", "http://localhost:5000/app/delete/user:id");
+    //     XHR.send( FD );
+    //    console.log("User Deleted");
+    // }
     
     const form = document.getElementById("signup");
     form.addEventListener("submit", function(event) {
