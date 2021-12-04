@@ -47,7 +47,7 @@ For more information go to [Detailed Dependencies](/docs/doc.txt).
 Click [here](www.dukesucks.com)!
 
 ## Contributors
-<img src="/Contributors.png" width="100" height="100" />
+<img src="/Contributors.png" width="200" height="100" />
 ![1contributors](/Contributors.png?raw=true)
 
 Detailed roles of the contributors can be found in the [doc file](/docs/doc.txt)! :)
