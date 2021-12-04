@@ -14,7 +14,7 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 1. Open this repository in VSCode
 2. Once it is opened, open up a terminal window
 3. Run the command `npm install`
-4. Once it is done installing, run the command "npm start run"
+4. Once it is done installing, run the command `npm start run`
 5. Open up a web browser and go to http://localhost:3000/
 
 # Instructions
