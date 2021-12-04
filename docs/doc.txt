@@ -1,6 +1,6 @@
 a99-feel-free-to-join: Word Guessing Game
 
-Dependencies:
+Detailed Dependencies:
 "better-sqlite3": "^7.4.5",
 "concurrently": "^6.4.0",
 "cors": "^2.8.5",

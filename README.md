@@ -19,22 +19,23 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 
 ## Instructions
 
-1. In the Main Menu, log into the game with a username and password 
+1. In the **Main Menu**, log into the game with a username and password 
 2. As you start the game, you get **50 strikes** to guess the most amount of words with no time limit
 3. After reaching 50 strikes, your points are displayed based on however many words you have successfully guessed and scrabble letter's point value.
-4. There is a Leaderboard tab where it keeps track of highest scores among users
+4. There is a **Leaderboard** tab where it keeps track of highest scores among users
 5. At any point of the game, you have the option to go back to the Main Menu and restart as a different user
 
 
 ## Dependencies 
 
-1. "better-sqlite3": "^7.4.5"
-2. "concurrently": "^6.4.0"
-3. "cors": "^2.8.5",
-4. "express": "^4.17.1",
-5. "fs": "^0.0.1-security",
-6. "md5": "^2.3.0",
-7. "multer": "^1.4.3"
+1. better-sqlite3
+2. concurrently
+3. cors
+4. express
+5. fs"
+6. md5
+7. multer
+For detailed dependencies go to [Detailed Dependencies](/docs/doc.txt).
 
 ## Video Demo
 
