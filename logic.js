@@ -1,6 +1,6 @@
 import {sendData, startGame} from "./functions.js";
 window.addEventListener( "load" , function() {
-    let userInfo = {strikes: 0, word: "", userView: [], started: false}
+    let userInfo = {strikes: 0, word: "", userView: [], started: false, currentHighScore: 0, id: -1}
     const form = document.getElementById("guess");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
