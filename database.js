@@ -26,7 +26,7 @@ const sqlInit = `
         ('player8', 'ccc', '2021/08/20', 9),
         ('player9', 'ccc', '2021/1/20', 16),
         ('player10', 'ccc', '2021/04/20', 30),
-        ('player11', 'ccc', '2021/05/20', 20)
+        ('player11', 'ccc', '2021/05/20', 20);
 `;
 // Execute SQL commands that we just wrote above.
     db.exec(sqlInit);
@@ -38,3 +38,7 @@ const sqlInit = `
 }
 // Export all of the above as a module so that we can use it elsewhere.
 module.exports = db;
+
+// CREATE TABLE gameinfo ( id INTEGER PRIMARY KEY, word TEXT, currentGuess TEXT, started BIT, score INTEGER, strikes INTEGER);
+//         INSERT INTO gameinfo (id, word, currentGuess, started, score, strikes) VALUES 
+//         (1, '', '', 'FALSE', 0, 0)

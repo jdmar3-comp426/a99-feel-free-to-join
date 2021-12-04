@@ -16,13 +16,6 @@ export function arrayToString(userinfo) {
     return returnString;
 }
 
-function win() {
-    alert("Wow you won!");
-}
-function loss() {
-    alert("RIP, the zombies got to you :/")
-}
-
 export function sendData(userInfo, form) {
     const sendRequest = new XMLHttpRequest();
     let signupInfo = new FormData(form);
@@ -109,4 +102,53 @@ export function leaderBoard() {
     }
     sendRequest.send();
     return response;
+}
+
+function scoreWord(w) {
+    let score = 0;
+    for (var letter in word) {
+        switch(letter){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'l':
+            case 'n':
+            case 'o':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+                score += 1;
+                break;
+            case 'd':
+            case 'g':
+                score += 2;
+                break;
+            case 'b':
+            case 'c':
+            case 'm':
+            case 'p':
+                score += 3;
+                break;
+            case 'f':
+            case 'h':
+            case 'v':
+            case 'w':
+            case 'y':
+                score += 4;
+                break;
+            case 'k':
+                score += 5;
+                break;
+            case 'j':
+            case 'x':
+                score += 8;
+                break;
+            case 'z':
+            case 'q':
+                score += 10;
+                break;
+        }
+    }
+    return score;
 }

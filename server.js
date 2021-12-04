@@ -91,7 +91,9 @@ app.get("/app/word/", (req, res) => {
     let data = fs.readFileSync('./words.json', 'utf-8');
     let words = JSON.parse(data.toString());
     res.status(200).json({"message": words.words[Math.floor(Math.random() * (words.words.length - 1))]});
-})
+});
+
+
 
 // Default response for any other request
 app.use(function(req, res){

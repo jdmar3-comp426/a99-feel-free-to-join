@@ -1,4 +1,3 @@
-//const { userInfo } = require("os");
 
 window.addEventListener( "load", function () {
     function sendData() {
@@ -13,17 +12,34 @@ window.addEventListener( "load", function () {
             XHR.addEventListener('load', function(event) {
                 alert('Data was sent and response loaded.');
             });
-
-              XHR.open("POST", "http://localhost:5000/app/new/user" );
-              XHR.send( FD );
+            XHR.open("GET", `http://localhost:5000/app/users/${FD.get("pass")}`);
+            XHR.send();
+            XHR.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var json = (JSON.parse(XHR.response));
+                    if (Object.keys(json).length === 0) {
+                        newUser();
+                    } else {
+                        if (json.pass == md5(form.getElementById("pass"))) {
+                            console.log("Login complete. Sending you to game now...");
+                            //TODO do stuff to load user into game with potential saved data
+                        }
+                    }
+                }
+            }
+            
+    }
+    function newUser() {
+        const XHR = new XMLHttpRequest(),
+              FD = new URLSearchParams(new FormData( form ));
+        XHR.open("POST", "http://localhost:5000/app/new/user" );
+        XHR.send( FD );
     }
     
-    const form = document.getElementById( "signup" );
-
-    form.addEventListener( "submit", function (event) {
-        event.preventDefault(); 
-        // if user doesnt exist..  
+    const form = document.getElementById("signup");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
         sendData();
-        // else, login to existing user
     });
-});
+})
+  
