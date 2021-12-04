@@ -48,7 +48,7 @@ Click [here](www.dukesucks.com)!
 
 ## Contributors
 
-![1. djm0321 - DJ Moore ](54867834.png)
+![1. djm0321 - DJ Moore ](/DJ.png?raw=true)
 2. nasyyu - Natalie Yuziuk
 3. Fariha-Marzan - Fariha Marzan
 4. yuweimiao - Yuwei Miao
