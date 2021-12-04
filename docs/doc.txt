@@ -18,33 +18,23 @@ Yuwei Miao(yuweimiao): Database Lead
 Sam Tack(stackeberry): Review Manager
 
 API Documentation:
-
 database.js
-This file implements a database consisting of sqlInit and initializing 11 players as an example.
-
+->This file implements a database consisting of sqlInit and initializing 11 players as an example.
 form.js
-This files determines if the user login is successful or prompts user to input a different username/password
-
+->This files determines if the user login is successful or prompts user to input a different username/password
 functions.js
-This file contains functions that handles sending data to user regarding if the guess is correct as well as keeps track of user scores through counting the amount of strikes are left.
-
+->This file contains functions that handles sending data to user regarding if the guess is correct as well as keeps track of user scores through counting the amount of strikes are left.
 server.js
-This file deals with the code to create the API that allow users to run the server
-
+->This file deals with the code to create the API that allow users to run the server
 words.js
-The following file creates new words and creates json files if it already does not exist
-
+->The following file creates new words and creates json files if it already does not exist
 words.json, words.txt
-These two files contain all the words that are prompted to the users.
-
+->These two files contain all the words that are prompted to the users.
 gamePage.html
-This file sets up the Game Page where the user has the ability to start, get next word, go to the Leaderboard or return to the Main Menu.
-
+->This file sets up the Game Page where the user has the ability to start, get next word, go to the Leaderboard or return to the Main Menu.
 index.html
-It impliments the login user page and creates a new user every time user inputs information.
-
+->It impliments the login user page and creates a new user every time user inputs information.
 leaderboard.html
-This file automatically relist the players based off how high their score is
-
+->This file automatically relist the players based off how high their score is
 leaderboardlogic.js
-This file contains the backend where the player scores are being retrieved
+->This file contains the backend where the player scores are being retrieved
