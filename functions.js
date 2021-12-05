@@ -55,7 +55,7 @@ export function resetScore() {
 
 export function loadWords(startGame, userInfo) {
     const sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "http://localhost:5000/app/word/");
+    sendRequest.open("GET", `http://${location.hostname}:5000/app/word/`);
     let response = "incorrect";
     sendRequest.onreadystatechange = function() {
         if (this.readyState==4 && this.status == 200) {
@@ -83,7 +83,7 @@ export function startGame(userInfo, w) {
 
 export function leaderBoard() {
     const sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "http://localhost:5000/app/users/scores/", true);
+    sendRequest.open("GET", `http://${location.hostname}:5000/app/users/scores/`, true);
     let response = "incorrect";
     sendRequest.onreadystatechange = function() {
         if (this.readyState==4 && this.status == 200) {
@@ -159,7 +159,7 @@ function resetGame(userInfo) {
     document.getElementById('words').innerHTML = '';
     if(userInfo.score > userInfo.currentHighScore) {
         const XHP = new XMLHttpRequest();
-        XHP.open("PATCH", `http://localhost:5000/app/update/highscore/${localStorage.getItem("id")}-${userInfo.score}`)
+        XHP.open("PATCH", `http://${location.hostname}:5000/app/update/highscore/${localStorage.getItem("id")}-${userInfo.score}`)
         XHP.send();
         XHP.addEventListener('load', function() {
             alert("New Highscore!!!");

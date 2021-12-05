@@ -10,12 +10,13 @@ window.addEventListener( "load", function () {
                 alert('Something went wrong...');
             });
             const XHR2 = new XMLHttpRequest();
-            XHR.open("GET", `http://localhost:5000/app/users/login/${FD.get("user")}&${FD.get("pass")}`);
+            console.log(location.hostname)
+            XHR.open("GET", `http://${location.hostname}:5000/app/users/login/${FD.get("user")}&${FD.get("pass")}`);
             XHR.send();
             XHR.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     if (XHR.response=="") {
-                        XHR2.open("GET", `http://localhost:5000/app/users/${FD.get("user")}`);
+                        XHR2.open("GET", `http://${location.hostname}:5000/app/users/${FD.get("user")}`);
                         XHR2.addEventListener('load', function(event) {
                             if (XHR2.readyState == 4 && XHR2.status == 200) {
                               if (XHR2.response=="") {
@@ -43,7 +44,7 @@ window.addEventListener( "load", function () {
     function newUser() {
         const XHR = new XMLHttpRequest(),
               FD = new URLSearchParams(new FormData( form ));
-        XHR.open("POST", "http://localhost:5000/app/new/user" );
+        XHR.open("POST", `http://${location.hostname}:5000/app/new/user` );
         XHR.send( FD );
         XHR.addEventListener('load', function(event) {
             alert("New user created. Logging in now...")

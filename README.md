@@ -47,11 +47,7 @@ For more information go to [Detailed Dependencies](/docs/doc.txt).
 Click [here](www.dukesucks.com)!
 
 ## Contributors
-
-![1. djm0321 - DJ Moore ](/DJ.png?raw=true)
-2. nasyyu - Natalie Yuziuk
-3. Fariha-Marzan - Fariha Marzan
-4. yuweimiao - Yuwei Miao
-5. stackeberry - Sam Tack
+<img src="/Contributors.png" width="400" height="100" />
+![1contributors](/Contributors.png?raw=true)
 
 Detailed roles of the contributors can be found in the [doc file](/docs/doc.txt)! :)
