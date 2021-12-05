@@ -168,3 +168,4 @@ function resetGame(userInfo) {
     userInfo.started = false;
     alert("Game over. Please start a new game.")
 }
+

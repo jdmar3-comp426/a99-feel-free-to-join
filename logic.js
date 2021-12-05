@@ -44,3 +44,11 @@ window.addEventListener( "load" , function() {
         }
     })
 })
+
+function deleteUser() {
+    const XHR = new XMLHttpRequest();
+    XHR.open("DELETE", `http://localhost:5000/app/delete/user/${$localStorage.getItem("id")}`);
+    XHR.send();
+   console.log("User Deleted");
+   location.href = "/accountDeleted.html";
+}

@@ -49,6 +49,8 @@ window.addEventListener( "load", function () {
         })
         sendData();
     }
+
+    
     
     const form = document.getElementById("signup");
     form.addEventListener("submit", function(event) {
