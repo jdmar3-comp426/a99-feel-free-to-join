@@ -44,7 +44,7 @@ For more information go to [Detailed Dependencies](/docs/doc.txt).
 
 ## Video Demo
 
-Click [here](www.dukesucks.com)!
+Click [here](https://youtu.be/sVIK4tgtPtc)!
 
 ## Contributors
 <img src="/Contributors.png" width="360" height="100" />
