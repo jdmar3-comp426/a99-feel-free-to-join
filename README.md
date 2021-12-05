@@ -9,7 +9,7 @@ Word Guessing Game is a fun interactive vocabulary game. In this game, the user 
 2. VSCode
 3. Node.js
 
-## SetUp
+## SetUp 
 
 1. Open this repository in VSCode
 2. Once it is opened, open up a terminal window
