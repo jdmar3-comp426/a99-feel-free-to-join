@@ -7,8 +7,10 @@
     const XHR = new XMLHttpRequest();
       XHR.open("DELETE", `http://localhost:5000/app/delete/user/${localStorage.getItem("id")}`);
       XHR.send();
+      XHR.addEventListener('load', function(event) {
+        location.href = "/accountDeleted.html";
+      });
       console.log("User Deleted");
-      location.href = "/accountDeleted.html";
     }   
     </script>
     <meta charset="utf-8">
