@@ -36,5 +36,7 @@ index.html
 ->It impliments the login user page and creates a new user every time user inputs information.
 leaderboard.html
 ->This file automatically relist the players based off how high their score is
+accountDeleted.html
+->When clicking on the "Delete Account" button on gamePage.html, the user information is removed from the database and redirected to this page. The user can then navigate to the home page from here.
 leaderboardlogic.js
 ->This file contains the backend where the player scores are being retrieved
